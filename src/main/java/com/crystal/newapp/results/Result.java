@@ -11,6 +11,8 @@ import java.util.Set;
 @Table(name = "results")
 public class Result {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @Column(name = "gpa")
     private String gpa;
     @OneToMany(cascade = CascadeType.ALL,
